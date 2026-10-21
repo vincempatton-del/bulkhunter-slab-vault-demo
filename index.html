@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta name="slab-vault-mode" content="browser-demo">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#070d18">
+  <meta name="description" content="The Bulk Hunter Slab Vault. Choose your drop, reveal a graded card, and build your collection.">
+  <title>The Bulk Hunter — Slab Vault</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+  <script type="module" src="app.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="announcement"><span>THE BULK HUNTER / SLAB VAULT</span><span class="demo-status" id="demo-mode-label"><i></i> INTERACTIVE DEMO · NO REAL PURCHASES</span><button type="button" id="reset-demo-button" class="browser-reset" hidden>Reset my demo</button></div>
+  <header class="site-header">
+    <a class="brand" href="#packs" aria-label="The Bulk Hunter home"><span class="brand-mark" aria-hidden="true">TBH</span><span class="brand-type">THE BULK<span>HUNTER</span></span></a>
+    <nav aria-label="Main navigation"><a href="#packs" class="nav-link active" data-nav="packs">Packs</a><a href="#collection" class="nav-link" data-nav="collection">My collection <span id="nav-count">0</span></a><button class="nav-link" id="how-button">How it works <span aria-hidden="true">↗</span></button></nav>
+    <div class="header-tools"><a href="admin.html" class="manager-link">VAULT MANAGER <span>↗</span></a><button class="demo-pill" id="demo-info"><span class="dot"></span> DEMO MODE <span aria-hidden="true">ⓘ</span></button></div>
+  </header>
+  <main id="main">
+    <section id="shop-view">
+      <div class="page-intro"><div><p class="eyebrow">THE SLAB VAULT / WHERE THE NEXT CHAPTER STARTS</p><h1>YOUR NEXT GREAT <span>PULL.</span></h1></div><p class="intro-note">The thrill of the reveal.<br>A new addition to your collection.</p></div>
+      <div class="shop-layout">
+        <section class="vault-stage" aria-label="Slab pack preview">
+          <div class="stage-topline"><span><i class="red-dot"></i> THE BULK HUNTER VAULT</span><span id="stage-code">SERIES 001 / TCG</span></div>
+          <div class="stage-grid" aria-hidden="true"></div><div class="stage-light" aria-hidden="true"></div>
+          <div class="vault-ring ring-back" aria-hidden="true"></div><div class="vault-ring ring-front" aria-hidden="true"></div>
+          <div class="stage-rail rail-left" aria-hidden="true"></div><div class="stage-rail rail-right" aria-hidden="true"></div>
+          <div class="pack-shadow" aria-hidden="true"></div>
+          <div class="hero-pack" id="hero-pack" aria-hidden="true"><div class="pack-crimp top"></div><div class="pack-side-label">BULK HUNTER / GRADED COLLECTIBLES</div><div class="pack-emblem">TBH<span>SLAB VAULT</span></div><div class="pack-series">THE NEXT ONE<br>COULD BE <em>THE ONE.</em></div><div class="pack-tier" id="pack-tier-name">STARTER</div><div class="pack-footer"><span>1 GRADED CARD</span><span>01 / 04</span></div><div class="pack-crimp bottom"></div><div class="pack-shine"></div></div>
+          <div class="pedestal" aria-hidden="true"><div class="pedestal-top"></div><div class="pedestal-front"><span>THE BULK HUNTER</span><b>▰ ▰ ▰</b></div></div>
+          <div class="vault-readout"><span class="signal-light"></span><span>VAULT ONLINE</span><strong id="vault-count">—</strong><span>SLABS IN ROTATION</span></div><div class="stage-caption"><span class="caption-icon">◇</span><div><strong>Every pack. A new possibility.</strong><span>Choose your category and level to get started.</span></div><span class="stage-corner">[ TBH—001 ]</span></div>
+        </section>
+        <aside class="selection-panel" aria-labelledby="selection-heading">
+          <div class="panel-header"><p class="eyebrow">MAKE YOUR PICK</p><span id="step-indicator">01 / 02</span></div>
+          <div id="category-step"><h2 id="selection-heading">CHOOSE YOUR<br>CATEGORY.</h2><p class="panel-copy">Find your lane. Chase your next favorite.</p><div id="category-list" class="category-list"></div><button class="primary-button" id="continue-button">CHOOSE PACK LEVEL <span>→</span></button></div>
+          <div id="tier-step" hidden><button class="back-button" id="back-button">← <span id="selected-category-label">Pokémon</span><span>Change</span></button><h2>CHOOSE YOUR<br>PACK LEVEL.</h2><div id="tier-list" class="tier-list"></div><div class="value-summary"><div><span>Sample value range</span><strong id="value-range"></strong></div><div><span>Cards in this pack</span><strong>1 graded slab</strong></div></div><div class="odds-heading"><span>REVEAL ODDS</span><button class="text-button" id="odds-button">View possible pulls ↗</button></div><div id="odds-list" class="odds-list"></div><button class="primary-button" id="open-button">OPEN A DEMO PACK <span>↗</span></button><p class="demo-caption" id="stock-counter">Connecting to shared inventory</p><p class="demo-caption">Free demo opening · No payment or real prize</p></div>
+          <div class="panel-footnote"><span>◇</span><p>Sample cards. Real reveal energy.<br>One slab. One collector. Every time.</p></div>
+        </aside>
+      </div>
+      <div class="trust-strip"><span><b>01</b> CHOOSE A PACK</span><i></i><span><b>02</b> REVEAL YOUR SLAB</span><i></i><span><b>03</b> BUILD YOUR COLLECTION</span><a href="#how-it-works">THE DETAILS <span>↗</span></a></div>
+      <section class="inventory-section" aria-labelledby="inventory-heading"><div class="section-heading"><div><p class="eyebrow">TAKE A LOOK INSIDE</p><h2 id="inventory-heading">IN THE VAULT.</h2></div><p id="pool-description">A few of the cards waiting for their next collector.</p></div><div class="inventory-toolbar"><div class="tabs" role="tablist" aria-label="Card preview"><button role="tab" aria-selected="true" id="tab-chases" data-pool="chases">The chases <span>↗</span></button><button role="tab" aria-selected="false" id="tab-all" data-pool="all">Possible pulls</button></div><span class="sample-label">ILLUSTRATIVE DEMO INVENTORY</span></div><div id="card-grid" class="card-grid" role="tabpanel" aria-label="Possible slab cards"></div><p class="image-credit" id="image-credit">Demo values and odds are illustrative. Product photos are temporary reference images.</p></section>
+      <section class="how-section" id="how-it-works"><div class="how-title"><p class="eyebrow">A LITTLE MYSTERY. A LOT TO COLLECT.</p><h2>THE GOOD PART?<br><span>OPENING IT.</span></h2></div><div class="how-steps"><article><span>01</span><h3>Pick your pack.</h3><p>Choose a category and a pack level. See the sample odds and possible cards before you open.</p></article><article><span>02</span><h3>Meet your next slab.</h3><p>Rip open the pack for one randomly selected demo card. Every opening is a fresh draw.</p></article><article><span>03</span><h3>Make it a collection.</h3><p>Your slab joins your collection and leaves the available pool. Come back for the next drop.</p></article></div></section>
+    </section>
+    <section id="collection-view" hidden><div class="collection-heading"><div><p class="eyebrow">YOUR PULLS. YOUR STORY.</p><h1>THE COLLECTION<span>.</span></h1><p id="collection-mode-copy">Every reveal has a place here. Your browser’s collection. Backed by the vault.</p></div><a class="outline-button" href="#packs">OPEN ANOTHER PACK ↗</a></div><div class="collection-stats"><div><span>SLABS REVEALED</span><strong id="collection-total">0</strong></div><div><span>ILLUSTRATIVE TOTAL VALUE</span><strong id="collection-value">$0</strong></div><div><span>RARE + LEGENDARY PULLS</span><strong id="collection-rare">0</strong></div></div><div class="collection-toolbar"><label class="search-box"><span aria-hidden="true">⌕</span><input type="search" id="collection-search" placeholder="Search your collection" aria-label="Search your collection"></label><select id="collection-sort" aria-label="Sort collection"><option value="newest">Newest first</option><option value="value">Highest sample value</option><option value="name">Name A–Z</option></select><button class="outline-button small" id="export-button">EXPORT ↓</button></div><div id="collection-grid" class="card-grid"></div><div class="empty-state" id="collection-empty"><span>◇</span><h2>YOUR FIRST PULL IS WAITING.</h2><p>Open a demo pack and start your collection.</p><a class="primary-button" href="#packs">EXPLORE THE PACKS →</a></div><div class="collection-footer"><p>Demo only. No real purchases, ownership, shipping, or cash value.</p><a href="admin.html" class="text-button">Manage the vault ↗</a></div></section>
+  </main>
+  <footer class="site-footer"><a class="footer-wordmark" href="#packs">THE BULK<span>HUNTER</span></a><p>The Bulk Hunter / Slab Vault concept demo.<br>Not affiliated with GameStop, PSA, or the card brands shown.</p><span>BUILT FOR THE NEXT PULL. © 2026</span></footer>
+  <dialog id="reveal-dialog" class="reveal-dialog" aria-labelledby="reveal-heading"><button class="dialog-close" id="close-reveal" aria-label="Close reveal">×</button><div class="reveal-glow" aria-hidden="true"></div><div class="reveal-inner"><p class="eyebrow" id="reveal-eyebrow">YOUR NEXT PULL IS IN HERE</p><h2 id="reveal-heading">READY TO REVEAL?</h2><p id="reveal-subtitle">One pack. One surprise. Let’s see what’s inside.</p><button id="reveal-pack-button" class="reveal-pack" aria-label="Reveal your random slab"><span class="reveal-pack-logo">THE BULK HUNTER<strong>VAULT</strong></span><span class="reveal-pack-diamond">◇</span><span class="reveal-pack-level"></span><span class="reveal-pack-hint">TAP TO OPEN ↗</span></button><div id="revealed-card" hidden></div><div id="result-copy" class="result-copy" hidden></div><div class="reveal-actions" id="reveal-actions" hidden><button class="primary-button" id="open-again">OPEN ANOTHER ↗</button><button class="outline-button" id="view-collection">VIEW MY COLLECTION</button></div><button class="text-button instant-button" id="instant-reveal">Reveal instantly</button><p class="reveal-disclaimer">DEMO OPENING · SAMPLE CARD · NO REAL PRIZE</p></div></dialog>
+  <dialog id="info-dialog" class="info-dialog" aria-labelledby="info-title"><button class="dialog-close" id="close-info" aria-label="Close information">×</button><p class="eyebrow">GOOD TO KNOW</p><h2 id="info-title">THE DEMO DETAILS.</h2><div id="info-content"></div><div class="info-dialog-actions"><button class="outline-button" id="info-cancel" type="button" hidden>Keep my demo</button><button class="primary-button" id="info-done">GOT IT <span>→</span></button></div></dialog>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+</body>
+</html>
